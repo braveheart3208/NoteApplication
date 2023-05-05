@@ -50,8 +50,14 @@ class NoteDetailViewModel @Inject constructor(
                     noteUsecases.getNoteById(noteId)?.also { note ->
                         currentNoteId = note.id
 
-                        _noteTitle.value = noteTitle.value.copy(text = note.title)
-                        _noteDescription.value = _noteDescription.value.copy(text = note.content)
+                        _noteTitle.value = noteTitle.value.copy(
+                            text = note.title,
+                            isHintVisible = note.title.isBlank()
+                        )
+                        _noteDescription.value = _noteDescription.value.copy(
+                            text = note.content,
+                            isHintVisible = note.content.isBlank()
+                        )
                         _colorSelection.value = note.color
                     }
                 }

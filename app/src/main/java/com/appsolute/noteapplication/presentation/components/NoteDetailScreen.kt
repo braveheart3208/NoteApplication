@@ -170,7 +170,7 @@ fun NoteDetailScreen(
                 },
                 singleLine = false,
                 hintVisible = contentState.isHintVisible,
-                textStyle = MaterialTheme.typography.headlineMedium,
+                textStyle = MaterialTheme.typography.headlineSmall,
                 modifier = Modifier.fillMaxHeight()
             )
         }

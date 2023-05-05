@@ -18,6 +18,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.List
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExtendedFloatingActionButton
@@ -87,7 +88,7 @@ fun NotesScreen(
                 IconButton(onClick = {
                     onEvent(NoteEvent.ToggleSortNote)
                 }) {
-                    Icon(imageVector = Icons.Default.Refresh, contentDescription = "Sort")
+                    Icon(imageVector = Icons.Default.List, contentDescription = "Sort")
                 }
             }
             //Sorting Section
@@ -112,7 +113,8 @@ fun NotesScreen(
             LazyColumn(modifier = Modifier.fillMaxSize()) {
                 items(state.notes) { note ->
                     NoteItem(
-                        note = note, modifier = Modifier
+                        note = note,
+                        modifier = Modifier
                             .fillMaxWidth()
                             .clickable {
                                 navigationController.navigate(

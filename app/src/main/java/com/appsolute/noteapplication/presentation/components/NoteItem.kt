@@ -1,6 +1,6 @@
 package com.appsolute.noteapplication.presentation.components
 
-import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -16,8 +16,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.appsolute.noteapplication.domain.model.Note
 
@@ -34,11 +34,7 @@ fun NoteItem(
     modifier: Modifier = Modifier,
     onDeleteClick: () -> Unit
 ) {
-    Box(modifier = modifier) {
-//        Canvas(modifier = Modifier.matchParentSize()) {
-//
-//        }
-
+    Box(modifier = modifier.background(Color(note.color))) {
         Column(
             modifier = Modifier
                 .fillMaxSize()
