@@ -8,5 +8,5 @@ package com.appsolute.noteapplication.application.core
  */
 sealed class UiEvent {
     data class ShowSnackBar(val message: String) : UiEvent()
-    object SaveNote : UiEvent()
+    object NoteSaved : UiEvent()
 }

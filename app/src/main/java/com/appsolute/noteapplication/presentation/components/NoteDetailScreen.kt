@@ -70,8 +70,7 @@ fun NoteDetailScreen(
     LaunchedEffect(key1 = true, block = {
         uiEventFlow.collectLatest { event ->
             when (event) {
-                is UiEvent.SaveNote -> {
-                    onEvent(NoteDetailEvent.SaveNote)
+                is UiEvent.NoteSaved -> {
                     //Go back to previous screen
                     navController.navigateUp()
                 }

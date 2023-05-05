@@ -96,7 +96,7 @@ class NoteDetailViewModel @Inject constructor(
                             )
                         )
 
-                        _uiEvent.emit(UiEvent.SaveNote)
+                        _uiEvent.emit(UiEvent.NoteSaved)
                     } catch (exception: Exception) {
                         _uiEvent.emit(UiEvent.ShowSnackBar(exception.message ?: "Try again."))
                     }

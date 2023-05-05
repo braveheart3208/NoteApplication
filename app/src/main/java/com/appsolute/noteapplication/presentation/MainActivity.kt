@@ -36,9 +36,7 @@ class MainActivity : ComponentActivity() {
                             NotesScreen(
                                 navigationController = navController,
                                 state = noteListViewModel.state.value,
-                                onEvent = { event ->
-                                    noteListViewModel.onEventCalled(event)
-                                }
+                                onEvent = noteListViewModel::onEventCalled
                             )
                         }
 
@@ -62,9 +60,7 @@ class MainActivity : ComponentActivity() {
                                 contentState = noteDetailViewModel.noteDescription.value,
                                 colorState = noteDetailViewModel.colorSelection.value,
                                 uiEventFlow = noteDetailViewModel.eventFlow,
-                                onEvent = { event ->
-                                    noteDetailViewModel.onEvent(event)
-                                },
+                                onEvent = noteDetailViewModel::onEvent,
                             )
                         }
                     }
