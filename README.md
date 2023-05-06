@@ -1,6 +1,7 @@
 # NoteApplication
-https://img.shields.io/github/last-commit/braveheart3208/NoteApplication
-https://img.shields.io/maintenance/no/2023
+![GitHub last commit](https://img.shields.io/github/last-commit/braveheart3208/NoteApplication)
+![Maintenance](https://img.shields.io/maintenance/no/2030)
+
 Note Application is an Android Application written in Kotlin. In this application, Clean Architecture and MVVM design pattern are applied.
 
 **MVVM design pattern and benefits**
